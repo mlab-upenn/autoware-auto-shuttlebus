@@ -41,7 +41,7 @@ def get_shared_file(package_name, folder_name, file_name, arg_name):
 def generate_launch_description():
   """Generate launch description with a single component."""
   with open(
-      get_shared_file_path('bootcamp_launch', 'urdf', 'lincoln_mkz_17.urdf'),
+      get_shared_file_path('shuttlebus_launch', 'urdf', 'lincoln_mkz_17.urdf'),
       'r') as infp:
     urdf_file = infp.read()
 
@@ -62,7 +62,7 @@ def generate_launch_description():
       ]),
       launch_arguments={
           'params_file':
-              get_shared_file_path('bootcamp_launch', 'config',
+              get_shared_file_path('shuttlebus_launch', 'config',
                                    'ouster_config.yaml')
       }.items())
 
@@ -76,7 +76,7 @@ def generate_launch_description():
       remappings=[("points_raw", "/points")])
   # Launch Point cloud filter transformer
   filter_transformer_param_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'),
+      get_package_share_directory('shuttlebus_launch'),
       'config/ouster_filter_transformer.param.yaml')
   filter_transformer_param = DeclareLaunchArgument(
       'filter_transformer_param_file',
@@ -97,9 +97,9 @@ def generate_launch_description():
   # ----------------- Mapping ---------------------
   # Launch Lanlet2 map
   map_osm_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'), 'data/Pennovation.osm')
+      get_package_share_directory('shuttlebus_launch'), 'data/Pennovation.osm')
   lanelet2_map_provider_param_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'),
+      get_package_share_directory('shuttlebus_launch'),
       'config/lanelet2_map_provider.param.yaml')
   lanelet2_map_provider_param = DeclareLaunchArgument(
       'lanelet2_map_provider_param_file',
@@ -130,12 +130,12 @@ def generate_launch_description():
 
   # Launch point cloud map
   map_pcd_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'),
+      get_package_share_directory('shuttlebus_launch'),
       'data/Pennovation_processed.pcd')
   map_yaml_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'), 'data/Pennovation.yaml')
+      get_package_share_directory('shuttlebus_launch'), 'data/Pennovation.yaml')
   map_publisher_param_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'),
+      get_package_share_directory('shuttlebus_launch'),
       'config/map_publisher.param.yaml')
   map_publisher_param = DeclareLaunchArgument(
       'map_publisher_param_file',
@@ -156,7 +156,7 @@ def generate_launch_description():
 
   # ----------------- NDT Localizer -----------------
   scan_downsampler_param_file_path = os.path.join(
-      get_package_share_directory('bootcamp_launch'),
+      get_package_share_directory('shuttlebus_launch'),
       'config/scan_downsampler.param.yaml')
   scan_downsampler_param = DeclareLaunchArgument(
       'scan_downsampler_param_file_path',
@@ -173,7 +173,7 @@ def generate_launch_description():
       ],
       remappings=[("points_in", "/ouster/points_filtered")])
   ndt_localizer_param_file = os.path.join(
-      get_package_share_directory('bootcamp_launch'),
+      get_package_share_directory('shuttlebus_launch'),
       'config/ndt_localizer.param.yaml')
   ndt_localizer_param = DeclareLaunchArgument(
       'ndt_localizer_param_file',
@@ -193,7 +193,8 @@ def generate_launch_description():
 
   # --------------- Launch RViz2 ------------------------
   rviz_cfg_path = os.path.join(
-      get_package_share_directory('bootcamp_launch'), 'rviz/localization.rviz')
+      get_package_share_directory('shuttlebus_launch'),
+      'rviz/localization.rviz')
   with_rviz_param = DeclareLaunchArgument(
       'with_rviz',
       default_value='True',

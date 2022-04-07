@@ -35,24 +35,25 @@ def generate_launch_description():
     * costmap_generator
     * freespace_planner
   """
-  bootcamp_launch_pkg_prefix = get_package_share_directory('bootcamp_launch')
+  shuttlebus_launch_pkg_prefix = get_package_share_directory(
+      'shuttlebus_launch')
   behavior_planner_param_file = os.path.join(
-      bootcamp_launch_pkg_prefix, 'config/behavior_planner.param.yaml')
-  lane_planner_param_file = os.path.join(bootcamp_launch_pkg_prefix,
+      shuttlebus_launch_pkg_prefix, 'config/behavior_planner.param.yaml')
+  lane_planner_param_file = os.path.join(shuttlebus_launch_pkg_prefix,
                                          'config/lane_planner.param.yaml')
-  mpc_param_file = os.path.join(bootcamp_launch_pkg_prefix,
+  mpc_param_file = os.path.join(shuttlebus_launch_pkg_prefix,
                                 'config/mpc_controller.param.yaml')
   object_collision_estimator_param_file = os.path.join(
-      bootcamp_launch_pkg_prefix,
+      shuttlebus_launch_pkg_prefix,
       'config/object_collision_estimator.param.yaml')
   costmap_generator_param_file = os.path.join(
-      bootcamp_launch_pkg_prefix, 'config/costmap_generator.param.yaml')
+      shuttlebus_launch_pkg_prefix, 'config/costmap_generator.param.yaml')
   freespace_planner_param_file = os.path.join(
-      bootcamp_launch_pkg_prefix, 'config/freespace_planner.param.yaml')
+      shuttlebus_launch_pkg_prefix, 'config/freespace_planner.param.yaml')
   vehicle_characteristics_param_file = os.path.join(
-      bootcamp_launch_pkg_prefix, 'config/vehicle_characteristics.param.yaml')
+      shuttlebus_launch_pkg_prefix, 'config/vehicle_characteristics.param.yaml')
   vehicle_constants_manager_param_file = os.path.join(
-      bootcamp_launch_pkg_prefix, 'config/lexus_rx_hybrid_2016.param.yaml')
+      shuttlebus_launch_pkg_prefix, 'config/lexus_rx_hybrid_2016.param.yaml')
 
   # Arguments
   with_obstacles_param = DeclareLaunchArgument(
