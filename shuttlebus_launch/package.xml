@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>shuttlebus_launch</name>
+  <version>1.0.0</version>
+  <description>Launch package for shuttlebus</description>
+  <maintainer email="ruanzh@seas.upenn.edu">Zhihao Ruan</maintainer>
+  <license>Apache 2.0</license>
+
+  <!-- for maintaining package dependencies in CMakeList -->
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+  <buildtool_depend>autoware_auto_cmake</buildtool_depend>
+
+  <!-- Vehicle model -->
+  <exec_depend>robot_state_publisher</exec_depend>
+
+  <!-- Lidar -->
+  <exec_depend>ros2_ouster</exec_depend>
+  <exec_depend>lidarslam</exec_depend>
+  <exec_depend>point_type_adapter</exec_depend>
+  <exec_depend>point_cloud_filter_transform_nodes</exec_depend>
+
+  <!-- Mapping & Localization -->
+  <exec_depend>lanelet2_map_provider</exec_depend>
+  <exec_depend>ndt_nodes</exec_depend>
+
+  <!-- Planning & Control -->
+  <exec_depend>behavior_planner_nodes</exec_depend>
+  <exec_depend>lanelet2_global_planner_nodes</exec_depend>
+  <exec_depend>lane_planner_nodes</exec_depend>
+  <exec_depend>mpc_controller_nodes</exec_depend>
+  <exec_depend>object_collision_estimator_nodes</exec_depend>
+  <exec_depend>costmap_generator_nodes</exec_depend>
+  <exec_depend>freespace_planner_nodes</exec_depend>
+
+  <!-- provides linting & formatting -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

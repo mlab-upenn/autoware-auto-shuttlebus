@@ -1,0 +1,21 @@
+# params/map_publisher.param.yaml
+/**:
+  ros__parameters:
+    # map_pcd_file: "/mnt/ssd1/repos/autoware-project/AutowareAuto-dataspeed/src/external/bootcamp/bootcamp_launch/data/Pennovation.pcd"
+    # map_yaml_file: "/mnt/ssd1/repos/autoware-project/AutowareAuto-dataspeed/src/external/bootcamp/bootcamp_launch/data/Pennovation.yaml"
+    map_frame: "map"
+    map_config:
+      capacity: 7000000
+      min_point:
+        x: -200.0
+        y: -300.0
+        z: -40.0
+      max_point:
+        x: 300.0
+        y: 200.0
+        z: 15.0
+      voxel_size:
+        x: 2.0
+        y: 2.0
+        z: 0.02
+    viz_map: True

@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- TODO: Add GPS sensor -->
+<robot name="lincoln_mkz_17">
+
+  <!-- Center of the rear axis, when the vehicle sits on the ground with a full tank of gas and no movement -->
+  <link name="base_link">
+  </link>
+
+  <!-- Center of Gravity link -->
+  <link name="nav_base"/>
+
+  <joint name="nav_base_joint"
+    type="fixed">
+    <parent link="base_link"/>
+    <child link="nav_base"/>
+    <origin xyz="1.5618 0 0"
+      rpy="0 0 0"/>
+  </joint>
+
+  <link name="imu"/>
+
+  <joint name="imu_joint"
+    type="fixed">
+    <parent link="base_link"/>
+    <child link="imu"/>
+    <origin xyz="0 0 0"
+      rpy="0 0 0"/>
+  </joint>
+
+  <!-- Center of the primary antenna -->
+  <link name="gnss"/>
+
+  <joint name="gnss_joint"
+    type="fixed">
+    <parent link="base_link"/>
+    <child link="gnss"/>
+    <origin xyz="0 0 0"
+      rpy="0 0 0"/>
+  </joint>
+
+  <link name="laser_data_frame"/>
+
+  <joint name="lidar_joint"
+    type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_data_frame"/>
+    <origin xyz="1.498 -0.022 1.49"
+      rpy="0 0 0"/>
+  </joint>
+
+  <link name="inside_camera"/>
+
+  <joint name="inside_camera_joint"
+    type="fixed">
+    <parent link="base_link"/>
+    <child link="inside_camera"/>
+    <origin xyz="1.75 0 1.25"
+      rpy="-1.571 0 -1.571"/>
+  </joint>
+
+  <!-- Autoware Auto has /odom same as /map -->
+  <link name="odom"/>
+
+  <joint name="odom_joint"
+    type="fixed">
+    <parent link="odom"/>
+    <child link="base_link"/>
+    <origin xyz="0.0 0.0 0.0"
+      rpy="-0.0 0.0 0.0"/>
+  </joint>
+</robot>

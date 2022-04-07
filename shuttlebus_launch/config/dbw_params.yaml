@@ -1,0 +1,4 @@
+/**:
+  ros__parameters:
+    ackermann_wheelbase: 2.8498
+    ackermann_track: 1.5824
