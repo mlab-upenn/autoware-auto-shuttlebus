@@ -13,6 +13,7 @@ Supported regions:
 1. Set up Autoware.Auto code base following [this official documentation](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/installation-no-ade.html).
 2. Go into `src/external` and clone this repo:
 ```bash
+cd src/external
 git clone https://github.com/mlab-upenn/autoware-auto-shuttlebus.git
 ```
 
