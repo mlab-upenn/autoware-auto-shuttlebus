@@ -1,3 +1,7 @@
-# bootcamp_launch_autoware_auto
+# shuttlebus_launch
+A launch file package for AutowareAuto Shuttlebus
 
-A launch file package for Dataspeed DBW for AutowareAuto Bootcamp
+## Usage
+* `launch/localization.launch.py`: launches everything about localization.
+* `launch/planning.launch.py`: launches everything about planning.
+* `launch/bootcamp.launch.py`: **deprecated.** Only left as a reference.
