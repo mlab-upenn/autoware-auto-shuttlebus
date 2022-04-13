@@ -112,7 +112,8 @@ def generate_launch_description():
                   ('vehicle_state', '/vehicle/vehicle_kinematic_state'),
                   ('route', 'global_path'),
                   ('vehicle_state_report', '/vehicle/state_report'),
-                  ('vehicle_state_command', '/vehicle/state_command')])
+                  ('vehicle_state_command', '/vehicle/state_command'),
+                  ('ndt_pose', '/localization/ndt_pose')])
   lanelet2_global_planner = Node(
       package='lanelet2_global_planner_nodes',
       name='lanelet2_global_planner_node',
@@ -120,7 +121,8 @@ def generate_launch_description():
       executable='lanelet2_global_planner_node_exe',
       remappings=[('HAD_Map_Client', '/had_maps/HAD_Map_Service'),
                   ('vehicle_kinematic_state',
-                   '/vehicle/vehicle_kinematic_state')])
+                   '/vehicle/vehicle_kinematic_state'),
+                  ('ndt_pose', '/localization/ndt_pose')])
   lane_planner = Node(
       package='lane_planner_nodes',
       name='lane_planner_node',
