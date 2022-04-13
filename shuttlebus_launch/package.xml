@@ -33,6 +33,9 @@
   <exec_depend>costmap_generator_nodes</exec_depend>
   <exec_depend>freespace_planner_nodes</exec_depend>
 
+  <!-- visualization -->
+  <exec_depend>autoware_rviz_plugins</exec_depend>
+
   <!-- provides linting & formatting -->
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
