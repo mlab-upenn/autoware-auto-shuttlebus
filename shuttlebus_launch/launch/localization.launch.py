@@ -131,7 +131,7 @@ def generate_launch_description():
   # Launch point cloud map
   map_pcd_file = os.path.join(
       get_package_share_directory('shuttlebus_launch'),
-      'data/Pennovation_processed.pcd')
+      'data/Pennovation_bin.pcd')
   map_yaml_file = os.path.join(
       get_package_share_directory('shuttlebus_launch'), 'data/Pennovation.yaml')
   map_publisher_param_file = os.path.join(

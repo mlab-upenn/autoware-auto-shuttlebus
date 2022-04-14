@@ -34,7 +34,7 @@
     localizer:
       # ndt scan representation config
       scan:
-        capacity: 655360
+        capacity: 8000
       # ndt optimization problem configuration
       optimization:
         outlier_ratio: 0.55 # default value from PCL
