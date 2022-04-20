@@ -56,15 +56,15 @@ def generate_launch_description():
 
   # -------------------------------------------------------
   # Launch Ouster Lidar
-#   ouster_launch = IncludeLaunchDescription(
-#       PythonLaunchDescriptionSource([
-#           get_package_share_directory('ros2_ouster'), '/launch/driver_launch.py'
-#       ]),
-#       launch_arguments={
-#           'params_file':
-#               get_shared_file_path('shuttlebus_launch', 'config',
-#                                    'ouster_config.yaml')
-#       }.items())
+  #   ouster_launch = IncludeLaunchDescription(
+  #       PythonLaunchDescriptionSource([
+  #           get_package_share_directory('ros2_ouster'), '/launch/driver_launch.py'
+  #       ]),
+  #       launch_arguments={
+  #           'params_file':
+  #               get_shared_file_path('shuttlebus_launch', 'config',
+  #                                    'ouster_config.yaml')
+  #       }.items())
 
   # Launch imu BNO055 driver
   imu_param_file = os.path.join(
@@ -75,10 +75,10 @@ def generate_launch_description():
       default_value=imu_param_file,
       description='Path to parameter file for imu BNO055 ROS2 driver')
   imu = Node(
-        package = 'bno055',
-        executable = 'bno055',
-        parameters = [launch.substitutions.LaunchConfiguration('imu_param_file')],
-    )
+      package='bno055',
+      executable='bno055',
+      parameters=[launch.substitutions.LaunchConfiguration('imu_param_file')],
+  )
 
   # Launch Point type converter node
   point_type_adapter = Node(
