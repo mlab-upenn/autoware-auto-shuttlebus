@@ -20,6 +20,9 @@
   <exec_depend>point_type_adapter</exec_depend>
   <exec_depend>point_cloud_filter_transform_nodes</exec_depend>
 
+  <!-- IMU -->
+  <exec_depend>bno055</exec_depend>
+
   <!-- Mapping & Localization -->
   <exec_depend>lanelet2_map_provider</exec_depend>
   <exec_depend>ndt_nodes</exec_depend>
