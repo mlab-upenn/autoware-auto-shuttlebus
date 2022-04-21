@@ -14,7 +14,7 @@ repositories:
   src/external/ouster/ros2_driver:
     type: git
     url: https://github.com/ros-drivers/ros2_ouster_drivers.git
-    version: ros2
+    version: 239cd0948bded0aa1a294fa8011662b523e1db40
   src/external/ub_car_launch:
     type: git
     url: https://github.com/cavas-ub/ub_car_launch.git
