@@ -1,0 +1,29 @@
+repositories:
+  src/external/dataspeed/dbw_ros:
+    type: git
+    url: https://bitbucket.org/DataspeedInc/dbw_ros.git
+    version: ros2
+  src/external/dataspeed/dataspeed_can:
+    type: git
+    url: https://bitbucket.org/DataspeedInc/dataspeed_can.git
+    version: ros2
+  src/external/dataspeed/lusb:
+    type: git
+    url: https://bitbucket.org/DataspeedInc/lusb.git
+    version: ros2
+  src/external/ouster/ros2_driver:
+    type: git
+    url: https://github.com/ros-drivers/ros2_ouster_drivers.git
+    version: ros2
+  src/external/ub_car_launch:
+    type: git
+    url: https://github.com/cavas-ub/ub_car_launch.git
+    version: main
+  src/external/lidarslam_ros2:
+    type: git
+    url: https://github.com/rsasaki0109/lidarslam_ros2.git
+    version: foxy
+  src/external/imu/bno055:
+    type: git
+    url: https://github.com/flynneva/bno055.git
+    version: main
