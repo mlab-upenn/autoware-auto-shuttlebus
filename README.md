@@ -9,6 +9,8 @@ Supported regions:
 1. Each folder in this repository represents a valid ROS 2 package.
 2. All dependencies should be properly resolved in `package.xml` so that the entire system can be installed using `rosdep update`.
 
+***Developers:* please checkout [this note](https://docs.google.com/document/d/1tw0OC-AYvR9rxGwK4fLNkouOU2YLm5H-BTmGHltnF4w/edit?usp=sharing) for the latest documented known issues.**
+
 ## Usage
 1. Set up Autoware.Auto code base following [this official documentation](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/installation-no-ade.html).
 2. Go into `src/external` and clone this repo:
