@@ -14,16 +14,22 @@ Supported regions:
 2. Go into `src/external` and clone this repo:
 ```bash
 cd src/external
-git clone https://github.com/mlab-upenn/autoware-auto-shuttlebus.git
+git clone https://github.com/mlab-upenn/autoware-auto-shuttlebus.git pennovation-shuttlebus
 ```
 
-3. Download the required data by following instructions in [this README](shuttlebus_launch/data/README.md).
-4. Build the require packages:
+3. Import the missing dependencies:
+```bash
+cd ${AUTOWARE_AUTO_ROOT}
+vcs import < src/external/pennovation-shuttlebus/penn.shuttlebus.repos --recursive 
+```
+
+4. Download the required data by following instructions in [this README](shuttlebus_launch/data/README.md).
+5. Build the require packages:
 ```bash
 colcon build --packages-up-to shuttlebus_launch
 ```
 
-5. Run the entire system:
+6. Run the entire system:
 ```bash
 ros2 launch shuttlebus_launch localization.launch.py
 ros2 launch shuttlebus_launch planning.launch.py
